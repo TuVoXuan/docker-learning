@@ -19,8 +19,8 @@ Sau khi hoàn thành lộ trình này, bạn sẽ có thể:
 - [x] [Bài 01 - Cài đặt Docker trên macOS](./01-getting-started/README.md)
 - [x] [Bài 02 - Image và Container](./02-images-and-containers/README.md)
 - [x] [Bài 03 - Container Lifecycle](./03-container-lifecycle/README.md)
-- [ ] [Bài 04 - Port Mapping](./04-port-mapping/README.md) ← **Bài tiếp theo**
-- [ ] [Bài 05 - Volumes](./05-volumes/README.md)
+- [x] [Bài 04 - Port Mapping](./04-port-mapping/README.md)
+- [ ] [Bài 05 - Volumes](./05-volumes/README.md) ← **Đang học**
 - [ ] [Bài 06 - Docker Networking](./06-networking/README.md)
 - [ ] [Bài 07 - Dockerfile](./07-dockerfile/README.md)
 - [ ] [Bài 08 - Docker Compose](./08-docker-compose/README.md)
@@ -55,6 +55,9 @@ docker run -d IMAGE
 # Đặt tên container
 docker run --name NAME IMAGE
 
+# Publish port
+docker run -p HOST_PORT:CONTAINER_PORT IMAGE
+
 # Xem container đang chạy
 docker ps
 
@@ -79,6 +82,6 @@ docker rmi IMAGE
 
 ## Trạng thái hiện tại
 
-Bạn đã học xong các concept nền tảng về **Image, Container và Container Lifecycle**.
+Đã hoàn thành **Bài 04 - Port Mapping**: host/container ports, port conflicts, `EXPOSE`, image tags, container states và ý nghĩa của `localhost` giữa các container.
 
-Bài tiếp theo: **Port Mapping — hiểu `-p 8080:80`, host port, container port và localhost.**
+**Đang học: Bài 05 - Docker Volumes.**
