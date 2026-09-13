@@ -20,8 +20,8 @@ Sau khi hoàn thành lộ trình này, bạn sẽ có thể:
 - [x] [Bài 02 - Image và Container](./02-images-and-containers/README.md)
 - [x] [Bài 03 - Container Lifecycle](./03-container-lifecycle/README.md)
 - [x] [Bài 04 - Port Mapping](./04-port-mapping/README.md)
-- [ ] [Bài 05 - Volumes](./05-volumes/README.md) ← **Đang học**
-- [ ] [Bài 06 - Docker Networking](./06-networking/README.md)
+- [x] [Bài 05 - Volumes](./05-volumes/README.md)
+- [ ] [Bài 06 - Docker Networking](./06-networking/README.md) ← **Đang học**
 - [ ] [Bài 07 - Dockerfile](./07-dockerfile/README.md)
 - [ ] [Bài 08 - Docker Compose](./08-docker-compose/README.md)
 - [ ] [Bài 09 - Environment Variables](./09-environment-variables/README.md)
@@ -78,10 +78,22 @@ docker images
 
 # Xóa image
 docker rmi IMAGE
+
+# Volume
+docker volume create NAME
+docker volume ls
+docker volume inspect NAME
+docker volume rm NAME
+
+# Named Volume
+docker run -v VOLUME_NAME:CONTAINER_PATH IMAGE
+
+# Bind Mount
+docker run -v HOST_PATH:CONTAINER_PATH IMAGE
 ```
 
 ## Trạng thái hiện tại
 
-Đã hoàn thành **Bài 04 - Port Mapping**: host/container ports, port conflicts, `EXPOSE`, image tags, container states và ý nghĩa của `localhost` giữa các container.
+Đã hoàn thành **Bài 05 - Docker Volumes**: persistent data, named volumes, bind mounts, read-only mounts và PostgreSQL persistence.
 
-**Đang học: Bài 05 - Docker Volumes.**
+**Đang học: Bài 06 - Docker Networking.**
