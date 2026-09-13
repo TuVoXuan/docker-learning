@@ -21,8 +21,8 @@ Sau khi hoàn thành lộ trình này, bạn sẽ có thể:
 - [x] [Bài 03 - Container Lifecycle](./03-container-lifecycle/README.md)
 - [x] [Bài 04 - Port Mapping](./04-port-mapping/README.md)
 - [x] [Bài 05 - Volumes](./05-volumes/README.md)
-- [ ] [Bài 06 - Docker Networking](./06-networking/README.md) ← **Đang học**
-- [ ] [Bài 07 - Dockerfile](./07-dockerfile/README.md)
+- [x] [Bài 06 - Docker Networking](./06-networking/README.md)
+- [ ] [Bài 07 - Dockerfile](./07-dockerfile/README.md) ← **Đang học**
 - [ ] [Bài 08 - Docker Compose](./08-docker-compose/README.md)
 - [ ] [Bài 09 - Environment Variables](./09-environment-variables/README.md)
 - [ ] [Bài 10 - Debugging Docker](./10-debugging/README.md)
@@ -90,10 +90,20 @@ docker run -v VOLUME_NAME:CONTAINER_PATH IMAGE
 
 # Bind Mount
 docker run -v HOST_PATH:CONTAINER_PATH IMAGE
+
+# Network
+docker network ls
+docker network create NAME
+docker network inspect NAME
+docker network connect NETWORK CONTAINER
+docker network disconnect NETWORK CONTAINER
+
+# Run container trong network
+docker run --network NETWORK IMAGE
 ```
 
 ## Trạng thái hiện tại
 
-Đã hoàn thành **Bài 05 - Docker Volumes**: persistent data, named volumes, bind mounts, read-only mounts và PostgreSQL persistence.
+Đã hoàn thành **Bài 06 - Docker Networking**: bridge networks, Docker DNS, container-to-container communication, network isolation, connect/disconnect và PostgreSQL networking.
 
-**Đang học: Bài 06 - Docker Networking.**
+**Đang học: Bài 07 - Dockerfile.**
