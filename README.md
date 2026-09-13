@@ -22,8 +22,8 @@ Sau khi hoàn thành lộ trình này, bạn sẽ có thể:
 - [x] [Bài 04 - Port Mapping](./04-port-mapping/README.md)
 - [x] [Bài 05 - Volumes](./05-volumes/README.md)
 - [x] [Bài 06 - Docker Networking](./06-networking/README.md)
-- [ ] [Bài 07 - Dockerfile](./07-dockerfile/README.md) ← **Đang học**
-- [ ] [Bài 08 - Docker Compose](./08-docker-compose/README.md)
+- [x] [Bài 07 - Dockerfile](./07-dockerfile/README.md)
+- [ ] [Bài 08 - Docker Compose](./08-docker-compose/README.md) ← **Đang học**
 - [ ] [Bài 09 - Environment Variables](./09-environment-variables/README.md)
 - [ ] [Bài 10 - Debugging Docker](./10-debugging/README.md)
 - [ ] [Bài 11 - Docker trong Production](./11-production/README.md)
@@ -79,6 +79,20 @@ docker images
 # Xóa image
 docker rmi IMAGE
 
+# Build image
+docker build -t IMAGE_NAME .
+docker build -t IMAGE_NAME:TAG .
+
+# Chọn Dockerfile khác
+docker build -f Dockerfile.production -t IMAGE_NAME .
+
+# Inspect image/container
+docker image inspect IMAGE_NAME
+docker inspect CONTAINER_NAME
+
+# Vào container
+docker exec -it CONTAINER_NAME sh
+
 # Volume
 docker volume create NAME
 docker volume ls
@@ -104,6 +118,6 @@ docker run --network NETWORK IMAGE
 
 ## Trạng thái hiện tại
 
-Đã hoàn thành **Bài 06 - Docker Networking**: bridge networks, Docker DNS, container-to-container communication, network isolation, connect/disconnect và PostgreSQL networking.
+Đã hoàn thành **Bài 07 - Dockerfile**: Dockerfile instructions, build context, `.dockerignore`, build cache, `CMD`/`ENTRYPOINT`, multi-stage builds, image tags và recreate container khi image thay đổi.
 
-**Đang học: Bài 07 - Dockerfile.**
+**Đang học: Bài 08 - Docker Compose.**
